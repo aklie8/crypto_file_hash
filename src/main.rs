@@ -1,7 +1,6 @@
 // Import necessary items from standard library
 use clap::{App, Arg};  // For parsing command-line arguments
 use std::fs::File;      // For file operations
-use std::io::{self, Read};  // For input/output operations
 use std::path::Path;    // For working with file paths
 use sha2::{Digest, Sha256};  // For computing SHA-256 hashes
 
@@ -32,5 +31,21 @@ fn main() {
         }
         Ok(file) => file,  // Continue with the opened file if successful
     };
+
+       // Create a buffer to hold the contents of the file
+       let mut buffer = Vec::new();
+
+       // Read the contents of the file into the buffer
+       if let Err(why) = file.read_to_end(&mut buffer) {
+           // Handle the case where file reading fails
+           eprintln!("Error: Couldn't read {}: {}", path.display(), why);
+           std::process::exit(1);  // Exit the program with an error code
+       }
+   
+       // Calculate the SHA-256 hash of the file contents
+       let hash = Sha256::digest(&buffer);
+   
+       // Print the calculated hash as a hexadecimal string
+       println!("{:x}", hash);
 
 }
