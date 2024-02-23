@@ -1,0 +1,4 @@
+Hello, world!
+This is a test file for calculating the hash.
+It contains some sample text for demonstration purposes.
+Feel frcee to modify it as needed.
