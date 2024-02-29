@@ -14,6 +14,6 @@ This program calculates the hash value of a specified file using the BLAKE3 cryp
 ### The executable file will be located in the target/release/ directory.
 
 # Dependencies
-  ## clap: Used for parsing command-line arguments.
-  ## blake3: Provides functionality for computing BLAKE3 hashes.
-  ## openssl: For additional cryptographic operations (not currently utilized in this version).
+  - clap: Used for parsing command-line arguments.
+  - blake3: Provides functionality for computing BLAKE3 hashes.
+  - openssl: For additional cryptographic operations (not currently utilized in this version).
