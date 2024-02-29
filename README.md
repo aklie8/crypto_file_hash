@@ -14,6 +14,6 @@ To use the program, run the executable specifying the path to the file for which
 ## The executable file will be located in the target/release/ directory.
 
 ## Dependencies
-clap: Used for parsing command-line arguments.
-blake3: Provides functionality for computing BLAKE3 hashes.
-openssl: For additional cryptographic operations (not currently utilized in this version).
+  # clap: Used for parsing command-line arguments.
+  # blake3: Provides functionality for computing BLAKE3 hashes.
+  # openssl: For additional cryptographic operations (not currently utilized in this version).
