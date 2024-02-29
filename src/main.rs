@@ -1,9 +1,9 @@
-/* Import necessary items from standard library */
+/* Import necessary items from standard library and external crates */
 use clap::{App, Arg};            // For parsing command-line arguments
 use std::io::Read;                // For file input/output operations
 use std::fs::File;                // For file operations
 use std::path::Path;              // For working with file paths
-use sha2::{Digest, Sha256};       // For computing SHA-256 hashes
+use blake3::Hasher;                // For computing BLAKE3 hashes
 
 /* Main function where the program execution starts */
 fn main() {
@@ -42,9 +42,15 @@ fn main() {
         std::process::exit(1);    // Exit the program with an error code
     }
 
-    // Calculate the SHA-256 hash of the file contents
-    let hash = Sha256::digest(&buffer);
+    // Calculate the BLAKE3 hash of the file contents
+    let mut hasher = Hasher::new();
+    hasher.update(&buffer);
+    let hash = hasher.finalize();
 
     // Print the calculated hash as a hexadecimal string
-    println!("{:x}", hash);
+    println!("Hash value of test.txt: {:?}", hash);
+
+    //to make the hash value into hexadecimal format 
+    //println!("{:x?}", hash.as_bytes());
+
 }
