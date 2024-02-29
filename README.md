@@ -6,14 +6,14 @@ This program calculates the hash value of a specified file using the BLAKE3 cryp
 ## Usage
 To use the program, run the executable specifying the path to the file for which you want to calculate the hash.
 
- # For example: 
+ ## For example: 
     1. cargo run <filename>
     2. Run cargo build --release to build the executable.
 
 
 ## The executable file will be located in the target/release/ directory.
 
-# Dependencies
+## Dependencies
 clap: Used for parsing command-line arguments.
 blake3: Provides functionality for computing BLAKE3 hashes.
 openssl: For additional cryptographic operations (not currently utilized in this version).
