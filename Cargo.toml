@@ -1,5 +1,5 @@
 [package]
-name = "starter_cli"
+name = "crypto_file_hash"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,13 @@ edition = "2021"
 
 [dependencies]
 clap = "3.0.0-beta.2"
-blake3 = "0.3"
 openssl = "0.10.34"
+blake3 = "0.3"           #For Blake3 hashing
+sha2 = "0.9.7"           # For SHA-256 and SHA-512 hashing
+md5 = "0.7.0"            # For MD5 hashing
+blake2b_simd = "1.0.2"   # For BLAKE2b hashing
+blake2s_simd = "1.0.2"  # For BLAKE2s hashing
+bcrypt = "0.11.0"
+
+
 
