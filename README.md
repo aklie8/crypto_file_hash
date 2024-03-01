@@ -9,6 +9,11 @@
  ## For example: 
     1. cargo run <filename>
     2. Run cargo build --release to build the executable.
+    3. openSSl Command Line Arguments:
+      1. SHA-256:  openssl dgst -sha256 <filename>
+      2. SHA-384:  openssl dgst -sha384 <filename>
+      3. SHA-512:  openssl dgst -sha512 <filename>
+      4. MD5:      openssl dgst -md5 <filename>
 
 
 ### The executable file will be located in the target/release/ directory.
